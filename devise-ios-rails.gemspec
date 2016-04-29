@@ -24,5 +24,5 @@ Gem::Specification.new do |s|
   s.add_dependency "devise", ">= 3.4", "< 4.1"
   s.add_dependency "simple_token_authentication", "~> 1.7"
   s.add_dependency "active_model_serializers", "~> 0.9"
-  s.add_dependency "koala", "~> 1.11.1"
+  s.add_dependency "koala", ">= 1.11.1", "< 2.4"
 end
