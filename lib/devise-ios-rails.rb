@@ -44,7 +44,7 @@ module DeviseIosRails
         end
 
         annotate_class = (SimpleTokenAuthentication.const_defined? 'FallbackAuthenticationHandler') ? 'FallbackAuthenticationHandler' : 'DeviseFallbackHandler'
-        annotate_class = 'SimpleTokenAuthentication::' + annotate_class
+        annotate_class = 'SimpleTokenAuthentication::' + 'DeviseFallbackHandler'
         annotate_class.constantize.class_eval do
           def authenticate_entity!(controller, entity)
             controller.send("authenticate_#{entity.name_underscore}!".to_sym, force: true)
